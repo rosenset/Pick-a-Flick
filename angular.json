@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "SchneiderFlix"
+    }
+  },
+  "defaultProject": "SchneiderFlix",
+  "cli": {
+    "analytics": "1192ed2d-8c83-4667-8606-302d46bca3c0"
+  }
 }
