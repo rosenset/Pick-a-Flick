@@ -1,18 +1,10 @@
 <form (submit)="searchSubmit(searchForm.value)" #searchForm="ngForm">
 <input type="text" name="releaseYear" ngModel>
+<input type="text" name="actorName" ngModel>
 <select name="genreId" ngModel>
     <option [value]="genre.id" *ngFor="let genre of genres">{{genre.name}}</option>
 
 </select>
 
 <button type="submit">Submit</button>
-</form>
-<br>
-<br>
-<br>
-<form (submit)="searchSubmit(yearSearch.value)" #yearSearch="ngForm">
-
-    <input  type="text" name="releaseYear" ngModel>
-    <button type="submit">Submit</button>
-
 </form>

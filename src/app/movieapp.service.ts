@@ -7,44 +7,46 @@ import { Observable } from 'rxjs'
 })
 export class MovieappService {
 
-  movieGenre : any;
+  movieGenre: any;
+  movies: any;
 
   constructor(private http: HttpClient) { }
 
-  getGenre(): Observable<any>{
+  getGenre(): Observable<any> {
 
     const parameters = {
 
-    api_key: '6a5e8e2794d9936ea3a65f37b3b40410',
+      api_key: '6a5e8e2794d9936ea3a65f37b3b40410',
 
     }
-    return this.http.get('https://api.themoviedb.org/3/genre/movie/list', {params: parameters})
+    return this.http.get('https://api.themoviedb.org/3/genre/movie/list', { params: parameters })
   }
-  
-  getMovies(searchCrit: any){
+
+  getMovies(searchCrit: any) {
 
     console.log("getMovies got called");
     console.log(searchCrit)
     const parameters = {
 
       api_key: '6a5e8e2794d9936ea3a65f37b3b40410',
-      with_genres: searchCrit.genreId
+      with_genres: searchCrit.genreId,
+      primary_release_year: searchCrit.releaseYear,
+      with_cast: searchCrit.actorId ? searchCrit.actorId.toString() : "",
+
 
     }
 
-    return this.http.get('https://api.themoviedb.org/3/discover/movie', {params: parameters})
+    return this.http.get('https://api.themoviedb.org/3/discover/movie', { params: parameters })
   }
 
-  getReleaseYear(searchCrit: any){
-    console.log("getRY got called");
-    console.log(searchCrit);
+  getActorId(actorName) {
+
     const parameters = {
-      
+
       api_key: '6a5e8e2794d9936ea3a65f37b3b40410',
-      primary_release_year: searchCrit.releaseYear
-
+      query: actorName ? actorName : "",
     }
-    return this.http.get('https://api.themoviedb.org/3/discover/movie', {params: parameters})
-
+    return this.http.get('https://api.themoviedb.org/3/search/person', {params : parameters})
   }
+
 }

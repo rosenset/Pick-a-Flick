@@ -15,6 +15,7 @@ export class SearchCriteriaComponent implements OnInit {
 
   ngOnInit(): any {
 
+
     
     this.movieAppService.getGenre().subscribe(this.onSuccess.bind(this), this.onError.bind(this))
   }
@@ -28,8 +29,30 @@ export class SearchCriteriaComponent implements OnInit {
     console.log(error.message);
   }
   searchSubmit(data){
-    console.log("searchSubmit method got called")
-    console.log(data);
-    this.movieAppService.getMovies(data).subscribe(response => console.log(response))
-  }
+    let actorsName = data.actorName;
+    if(actorsName.length > 0) {
+
+      this.movieAppService.getActorId(actorsName).subscribe((response: any) => {
+        console.log(response.results[0])
+        const actorId = response.results ? response.results[0].id : "";
+        const parameters = {releaseYear: data.releaseYear, actorId: actorId, genreId: data.genreId}
+        this.movieAppService.getMovies(parameters).subscribe((response : any) => {
+          this.movieAppService.movies = response.results    
+          console.log(response)
+        
+        })
+      });
+
+    } else {
+
+      this.movieAppService.getMovies(data).subscribe((response : any) => {
+        this.movieAppService.movies = response.results  
+        console.log(response)
+      
+      })
+    }
+    
+     
+  
+  }  
 }
