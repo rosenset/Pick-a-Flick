@@ -49,4 +49,12 @@ export class MovieappService {
     return this.http.get('https://api.themoviedb.org/3/search/person', {params : parameters})
   }
 
+  getPopular(){
+    const parameters = {
+      api_key: '6a5e8e2794d9936ea3a65f37b3b40410',
+      // query: backdrop_path ? backdrop_path: "",
+    }
+    // console.log(backdrop_path);
+    return this.http.get('https://api.themoviedb.org/3/movie/popular', {params : parameters})
+  } 
 }

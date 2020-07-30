@@ -1,1 +1,3 @@
-<p>movie-list works!</p>
+<div *ngFor="let movie of getMovies()">
+    <img [src]="'https://image.tmdb.org/t/p/w500'+ movie.backdrop_path" alt="">
+</div>
