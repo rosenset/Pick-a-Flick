@@ -1,0 +1,29 @@
+
+#movie-card {
+
+   margin: 10px;
+   
+}
+
+#movie-img {
+ 
+border-radius: 10px;
+width: 350px;
+height: 181px;
+box-shadow:5px 10px 8px #888888;
+
+}
+
+#movie-list-container {
+
+    display:flex; 
+    flex-direction: row; 
+    justify-content: center; 
+    align-items: center;
+    flex-wrap: wrap; 
+    text-align: center;
+    box-sizing: border-box;
+ 
+    padding: 5px;
+  
+}
