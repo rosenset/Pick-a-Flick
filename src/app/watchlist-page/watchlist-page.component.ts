@@ -20,7 +20,10 @@ export class WatchlistPageComponent implements OnInit {
   }
 
     
-
-
+  removeFromFavorites(movie:any){
+    const movieIndex = this.movieAppService.favoriteMovies.indexOf(movie);
+    this.movieAppService.favoriteMovies.splice(movieIndex, 1);
+    console.log(this.movieAppService.favoriteMovies);
+  }
 
 }

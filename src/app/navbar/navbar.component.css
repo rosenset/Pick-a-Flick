@@ -6,7 +6,7 @@
     background-color: black;
     position: fixed;
     height: 50px;
-    width: 100%;
+    width: 100vw;
     padding: 0;
 }
 
@@ -21,9 +21,4 @@ a {
 a:visited {
 
     color:white;
-}
-
-a:hover {
-
-    
 }
