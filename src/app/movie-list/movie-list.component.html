@@ -1,5 +1,7 @@
+
+ <button [routerLink]="['/favorites']">Favorite</button>
 <div id="movie-list-container">
-  <button [routerLink]="['/favorites']">Favorite</button>
+ 
   <div *ngFor="let movie of getMovies()">
     <div id="movie-card">
       <img id="movie-img" [src]="'https://image.tmdb.org/t/p/w500' + movie.backdrop_path" alt="movie-image"/>

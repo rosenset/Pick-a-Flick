@@ -11,6 +11,8 @@
     justify-content:center;
     background-color: #23964f70;
     
+   
+    
     
 }
 
@@ -25,17 +27,23 @@
 }
 
 .label {
-    margin: 7px 0 3px 0;
+    /* margin: 7px 0 3px 0; */
     font-size: 17px;
 }
 
 .input {
     border: 1px solid black;
+    box-sizing: border-box;
+    margin:8px;
     text-align:center;
     border-radius:10px;
     padding: 3px;
     color: black;
+    height: 30px;
     font-size: 15px;
+}
+.genre-dropdown {
+   height: 35px;
 }
 
 .button {
@@ -44,39 +52,61 @@ color: whitesmoke;
 width: 100px;
 margin-bottom: 10px;
 border-radius: 10px;
-border: 1px dotted black;
+/* border: 1px dotted black; */
 padding: 2px;
-margin-right: auto;
-margin-left: 250px;
+/* margin-right: auto;
+margin-left: 250px; */
+}
+
+.button-div{
+
+   display:flex;
+   justify-content: center;
+   align-items: center;
+   box-sizing: border-box;
+   margin: 8px;
 }
 
 
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-width: 768px) {
+
+    #main-content {
+
+        display: flex;
+        flex-direction: column;
+        
+    } 
     
-    .search-form {
-          /* display: flex; */
+    
+    .search-container {
+        display:flex;
+        flex-direction:row;
+     
+       
+ 
+    }
+    /* .search-form {
+          
           float: left;
-          /* flex-direction: column; */
-          /* justify-content: space-between; */
+          
           align-items: baseline;
           width: 40%;
           float: left;
           margin-right: auto;
           margin-left: 0px;
-          /* margin-bottom: 0px; */
+        
           position: relative; top: 40px;
     }
      .search-items {
-   /* display: flex; */
+   
    float: left;
-   /* flex-direction: column; */
-   /* justify-content: space-between; */
+ 
    align-items: baseline;
    width: 40%;
    float: left;
    margin-right: auto;
    margin-left: 0px;
-   /* margin-bottom: 0px; */
+ 
    position: relative; top: 40px;
      }
 
@@ -87,5 +117,5 @@ margin-left: 250px;
     .input {
         padding: 2px;
         margin: 0 17px 0 8px;
-    }
+    } */
 }
