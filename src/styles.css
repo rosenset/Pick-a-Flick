@@ -2,5 +2,14 @@ html, body {
 
     margin:0;
     padding: 0;
+    background-color: #e4e3e3;
+
+    font-family: 'Cormorant Garamond', serif;
     }
 
+/* 
+    #app-container {
+
+    display:flex;
+    flex-direction: row;
+    } */

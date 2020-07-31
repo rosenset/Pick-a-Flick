@@ -1,24 +1,47 @@
-<div class="search-container">
+<div id="main-content" >
+<div>
+
+  <div class="search-container">
+   
     <h1 class="title">Pick a Flick</h1>
-        <form (submit)="searchSubmit(searchForm.value)" #searchForm="ngForm">
+    <form (submit)="searchSubmit(searchForm.value)" #searchForm="ngForm">
+      <div class="search-items"></div>
+      <label for="releaseYear" class="label"></label>
+      <input
+        type="text"
+        class="input"
+        id="releaseYear"
+        name="releaseYear"
+        placeholder="Release Year"
+        ngModel
+      />
 
-<div class="search-items"></div>
-    <label for="releaseYear" class="label"></label>
-        <input type="text" class="input" id="releaseYear" name="releaseYear" placeholder="Release Year" ngModel>
+      <label for="actorName" class="label"></label>
+      <input
+        type="text"
+        class="input"
+        id="actorName"
+        name="actorName"
+        placeholder="Name of Actor"
+        ngModel
+      />
 
-    <label for="actorName" class="label"></label>
-        <input type="text" class="input" id="actorName" name="actorName" placeholder="Name of Actor" ngModel>
+      <label for="select-genre" class="label">Genre:</label>
+      <select
+        type="text"
+        id="genreId"
+        name="genreId"
+        placeholder="Genre"
+        ngModel
+      >
+        <option [value]="genre.id" *ngFor="let genre of genres">{{
+          genre.name
+        }}</option>
+      </select>
 
-    <label for="select-genre" class="label">Genre:</label>
-        <select type="text" id="genreId" name="genreId" placeholder="Genre" ngModel>
-        <option [value]="genre.id" *ngFor="let genre of genres" >{{genre.name}}</option>
-
-</select>
-
-<div class="button-div">
-    <button class="label button">T o u c h</button>
+      <div class="button-div">
+        <button class="label button">T o u c h</button>
+      </div>
+    </form>
+  </div>
 </div>
-</form>
-</div>
-
-
