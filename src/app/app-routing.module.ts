@@ -5,12 +5,14 @@ import { WatchlistPageComponent } from './watchlist-page/watchlist-page.componen
 import { AppComponent } from './app.component';
 import { SearchCriteriaComponent } from './search-criteria/search-criteria.component';
 import { MovieinfoComponent } from './movieinfo/movieinfo.component';
+import { AboutComponent } from '../app/about/about.component'
 
 
 const routes: Routes = [
   {path: "home", component: MovieListComponent},
   {path: "favorites", component:WatchlistPageComponent},
   {path: "info", component:MovieinfoComponent},
+  {path: "about", component:AboutComponent},
   {path: "", redirectTo: "/home", pathMatch: "full"}
 ];
 

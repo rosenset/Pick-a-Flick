@@ -5,34 +5,13 @@
       <form (submit)="searchSubmit(searchForm.value)" #searchForm="ngForm">
         <div class="search-items">
           <label for="releaseYear" class="label"></label>
-          <input
-            type="text"
-            class="input"
-            id="releaseYear"
-            name="releaseYear"
-            placeholder="Release Year"
-            ngModel
-          />
+          <input type="text" class="input" id="releaseYear" name="releaseYear" placeholder="Release Year" ngModel />
 
           <label for="actorName" class="label"></label>
-          <input
-            type="text"
-            class="input"
-            id="actorName"
-            name="actorName"
-            placeholder="Name of Actor"
-            ngModel
-          />
+          <input type="text" class="input" id="actorName" name="actorName" placeholder="Name of Actor" ngModel />
 
           <label for="select-genre" class="label">Genre:</label>
-          <select
-            class="genre-dropdown"
-            type="text"
-            id="genreId"
-            name="genreId"
-            placeholder="Genre"
-            ngModel
-          >
+          <select class="genre-dropdown" type="text" id="genreId" name="genreId" placeholder="Genre" ngModel>
             <option [value]="genre.id" *ngFor="let genre of genres">{{
               genre.name
             }}</option>
@@ -41,8 +20,17 @@
           <div class="button-div">
             <button class="label button">Search</button>
           </div>
+          <div class="button-div">
+            <button class="button" (click)="hideNav = !hideNav">Navigation</button>
+          </div>
         </div>
+
       </form>
+
     </div>
+
+  </div>
+  <div>
+    <app-navbar *ngIf="hideNav"></app-navbar>
   </div>
 </div>

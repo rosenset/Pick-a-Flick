@@ -9,6 +9,7 @@ import { MovieappService } from '../movieapp.service'
 export class SearchCriteriaComponent implements OnInit {
 
   genres : any;
+  hideNav = false;
 
 
   constructor(private movieAppService: MovieappService) { }
