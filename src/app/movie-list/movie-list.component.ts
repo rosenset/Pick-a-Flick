@@ -11,20 +11,19 @@ export class MovieListComponent implements OnInit {
   constructor(private movieAppService: MovieappService) { }
 
   ngOnInit() {
-    this.movieAppService.getPopular().subscribe(this.onSuccess.bind(this), this.onError.bind(this))
-  }
-
-  onSuccess(data:any){
-    console.log(data);
-  }
-
-  onError(error: Error){
-    console.log(error.message);
+    
   }
 
   getMovies() {
-    console.log(this.movieAppService.movies)
+
     return this.movieAppService.movies
   }
+  
+  addToFavorites(movie:any){
+    this.movieAppService.favoriteMovies.push(movie);
+    console.log(this.movieAppService.favoriteMovies);
+  }
+  
 
+ 
 }

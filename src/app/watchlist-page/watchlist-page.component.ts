@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MovieappService } from '../movieapp.service';
+
 
 @Component({
   selector: 'app-watchlist-page',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WatchlistPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private movieAppService:MovieappService) { }
 
   ngOnInit(): void {
   }
+
+  getMovies(){
+
+    return this.movieAppService.favoriteMovies;
+  }
+
+    
+
+
 
 }
