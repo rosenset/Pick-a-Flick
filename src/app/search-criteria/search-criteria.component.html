@@ -15,7 +15,7 @@
           <select style="cursor: pointer;" for="select-input" class="genre-dropdown" type="text" id="genreId" name="genreId"
             placeholder="Select A Genre" ngModel>
             <option style="color:black;" selected value="">SELECT GENRE</option>
-            <option style="color: black; " [value]="genre.id" *ngFor="let genre of genres">{{
+            <option style="color: black; text-align: center; text-transform: uppercase;" [value]="genre.id" *ngFor="let genre of genres">{{
               genre.name
             }}</option>
           </select>
