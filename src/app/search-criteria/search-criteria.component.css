@@ -92,6 +92,7 @@
 
 .button:hover {
   box-shadow: none;
+  background-color: black;
 }
 
 .button-div {
@@ -160,12 +161,14 @@
 .dropdown:hover .dropdown-content {
   display: flex;
   justify-content: space-evenly;
+ 
 
 }
 
 .dropbtn :hover {
   box-shadow: 5px 5px 8px black;
   cursor: pointer;
+  
 }
 
 ::placeholder {
@@ -176,15 +179,20 @@
 }
 
 select {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  /* display: flex;
+  flex-direction: row;
+  justify-content: center; */
   color: whitesmoke;
   text-shadow: 2px 2px 5px black;
   font-size: 15px;
-  padding-left: 115px;
+ 
+  text-transform: uppercase;
+  text-align-last: center;
+ 
+  
 
 }
+
 
 
 
