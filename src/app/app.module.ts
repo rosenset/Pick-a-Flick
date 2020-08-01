@@ -8,7 +8,6 @@ import { SearchCriteriaComponent } from './search-criteria/search-criteria.compo
 import { MovieListComponent } from './movie-list/movie-list.component';
 import { WatchlistPageComponent } from './watchlist-page/watchlist-page.component';
 import { FormsModule } from '@angular/forms';
-import { NavbarComponent } from './navbar/navbar.component';
 import { MovieinfoComponent } from './movieinfo/movieinfo.component';
 import { AboutComponent } from './about/about.component';
 
@@ -19,7 +18,7 @@ import { AboutComponent } from './about/about.component';
     SearchCriteriaComponent,
     MovieListComponent,
     WatchlistPageComponent,
-    NavbarComponent,
+  
     MovieinfoComponent,
     AboutComponent,
   
