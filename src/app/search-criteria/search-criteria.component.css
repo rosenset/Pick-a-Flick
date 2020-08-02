@@ -153,8 +153,9 @@
 }
 
 .dropdown-content {
-  display: none;
+  display: flex;
   flex-direction: row;
+  justify-content: space-evenly;
   background-color: #f1f1f1;
   width:100vw;
   height: auto;
