@@ -10,6 +10,7 @@ import { WatchlistPageComponent } from './watchlist-page/watchlist-page.componen
 import { FormsModule } from '@angular/forms';
 import { MovieinfoComponent } from './movieinfo/movieinfo.component';
 import { AboutComponent } from './about/about.component';
+import { SinglemovieComponent } from './singlemovie/singlemovie.component';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { AboutComponent } from './about/about.component';
   
     MovieinfoComponent,
     AboutComponent,
+    SinglemovieComponent,
   
   ],
   imports: [

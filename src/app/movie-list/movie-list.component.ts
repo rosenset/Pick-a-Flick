@@ -19,11 +19,7 @@ export class MovieListComponent implements OnInit {
     return this.movieAppService.movies
   }
   
-  addToFavorites(movie:any){
-    this.movieAppService.favoriteMovies.push(movie);
-    console.log(this.movieAppService.favoriteMovies);
-  }
-  
+ 
 
  
 }

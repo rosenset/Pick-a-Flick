@@ -1,13 +1,12 @@
+
+
 html,
 body {
-  margin: 0;
-  padding: 0;
-  background-color: #e4e3e3;
+  margin:0;
+  padding:0;
+  background-color: #e4e3e3; 
   font-family: 'Rubik', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
+  
 }
 
 
@@ -19,7 +18,8 @@ body {
   flex-wrap: wrap;
   text-align: center;
   box-sizing: border-box;
-  padding: 0;
+  padding: 5px;
+ 
 
 }
 
@@ -37,6 +37,7 @@ body {
   font-family: inherit;
   cursor: pointer;
   transition: 0.2s;
+  font-size: 15px;
 }
 
 .movie-card-buttons:hover {
@@ -59,8 +60,10 @@ body {
   box-sizing: border-box;
   padding: 10px;
   background-color: white;
-  justify-content: center;
   align-items: center;
+  width:375px;
+  height: 335px;
+
 }
 
 #movie-card:hover {
@@ -72,11 +75,12 @@ body {
 }
 
 #movie-img {
-  display: flex;
+  /* display: flex; */
   border-radius: 10px;
   width: 350px;
   height: 181px;
   box-shadow: 5px 10px 8px #888888;
+  margin-bottom: 10px;
 }
 
 #buttons-container {
@@ -85,4 +89,3 @@ body {
 }
 
 
-@media only screen and (min-width: 768px) {}
