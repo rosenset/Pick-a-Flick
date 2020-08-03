@@ -1,12 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
+
 @Component({
   selector: 'app-movieinfo',
   templateUrl: './movieinfo.component.html',
   styleUrls: ['./movieinfo.component.css']
 })
 export class MovieinfoComponent implements OnInit { 
+  
+
   movie: any;
   constructor(private router:ActivatedRoute) { }
 
@@ -16,5 +19,5 @@ export class MovieinfoComponent implements OnInit {
       this.movie = params;
     })
   }
-
+ 
 }
